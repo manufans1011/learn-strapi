@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tyre_rim_details",
+  "info": {
+    "singularName": "tyre-rim-detail",
+    "pluralName": "tyre-rim-details",
+    "displayName": "TyreRimDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type_detail": {
+      "type": "string",
+      "required": true
+    },
+    "overview": {
+      "type": "richtext",
+      "required": true
+    },
+    "features_benefits": {
+      "type": "richtext",
+      "required": true
+    },
+    "load": {
+      "type": "integer"
+    },
+    "speed": {
+      "type": "string"
+    },
+    "od": {
+      "type": "integer"
+    },
+    "tyre_type": {
+      "type": "string"
+    },
+    "tyre_images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tyre_width": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tyre-width.tyre-width"
+    },
+    "tyre_profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tyre-profile.tyre-profile"
+    },
+    "tyre_rim": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tyre-rim.tyre-rim"
+    },
+    "sku": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

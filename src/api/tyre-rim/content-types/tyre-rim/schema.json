@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tyre_rims",
+  "info": {
+    "singularName": "tyre-rim",
+    "pluralName": "tyre-rims",
+    "displayName": "TyreRim",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "size": {
+      "type": "integer"
+    },
+    "tyre_profiles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tyre-profile.tyre-profile"
+    },
+    "tyre_widths": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tyre-width.tyre-width"
+    }
+  }
+}

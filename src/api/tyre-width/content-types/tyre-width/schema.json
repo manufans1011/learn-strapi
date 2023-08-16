@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tyre_widths",
+  "info": {
+    "singularName": "tyre-width",
+    "pluralName": "tyre-widths",
+    "displayName": "TyreWidth",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "width": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "tyre_profiles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tyre-profile.tyre-profile"
+    }
+  }
+}
